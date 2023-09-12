@@ -1,4 +1,4 @@
-# Go GitHub Actions Demo
+# CI Golang-Demo
 
 > Демо-приложение, для учебных целей по практике настройки пайплайнов для Github Actions и GitlabCI 
 
@@ -25,7 +25,7 @@ GitlabCI - [Use CI/CD to build your application](https://docs.gitlab.com/ee/topi
 
 ### Задание 1
 
-При каждом коммите в `main` ветку репозитория должны запускаться:
+При каждой отправке кода в `main` ветку репозитория должны запускаться:
 - проверка кода на ошибки
 - запуск тестов приложения
 
