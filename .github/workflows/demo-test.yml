@@ -6,7 +6,7 @@ on:
         - main
 
 jobs:
-    my_setup:
+    my_setup_lint_test:
         runs-on: ubuntu-latest
 
         steps:
@@ -21,8 +21,8 @@ jobs:
             - name: golangci-lint
               uses: golangci/golangci-lint-action@v3
 
-           # - name: test_make_lint
-           #   run: make lint
+            - name: test_make_lint
+              run: make lint
             
             - name: test_make_test
               run: make test
