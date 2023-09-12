@@ -1,4 +1,4 @@
-module github.com/brpaz/github-actions-demo-go
+module github.com/matyushkim/ci-golang-demo-matyushkin
 
 go 1.20
 
