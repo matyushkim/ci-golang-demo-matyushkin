@@ -26,3 +26,14 @@ jobs:
             
             - name: test_make_test
               run: make build
+        
+    my_build:
+        runs-on: ubuntu-latest
+        needs: [my_setup_lint_test]
+
+        steps:
+            - name: Git clone my repo
+              uses: actions/checkout@v4
+
+            - name: build
+              run: make build 
