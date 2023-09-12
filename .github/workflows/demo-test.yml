@@ -6,7 +6,7 @@ on:
         - main
 
 jobs:
-    job_debug:
+    my_setup:
         runs-on: ubuntu-latest
 
         steps:
@@ -18,9 +18,10 @@ jobs:
               with:
                 go-version: '1.12'
 
-            - name: test_make_lint
-              run: make lint
+    my_test:
+        needs: [my_setup]
+        - name: test_make_lint
+        run: make lint
 
-            - name: test_make_test
-              run: make test
-      
+        - name: test_make_test
+        run: make test
