@@ -18,13 +18,8 @@ jobs:
               with:
                 go-version: '1.12'
 
-    my_test:
-        runs-on: ubuntu-latest
-        needs: [my_setup]
-        
-        steps:
             - name: test_make_lint
               run: make lint
-
-             - name: test_make_test
-               run: make test
+            
+            - name: test_make_test
+              run: make test
