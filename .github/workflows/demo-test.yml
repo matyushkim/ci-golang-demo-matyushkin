@@ -1,4 +1,4 @@
-name: Go package
+name: ci-golang-demo-matyushkin
 
 on:
     push:
@@ -13,5 +13,14 @@ jobs:
             - name: Git clone my repo
               uses: actions/checkout@v4
 
-            - name: List current folder
-              run : ls -la
+            - name: Set up Go
+              uses: actions/setup-go@v4
+              with:
+                go-version: '1.12'
+
+            - name: test_make_lint
+              run: make lint
+
+            - name: test_make_test
+              run: make test
+      
