@@ -6,7 +6,7 @@ on:
         - main
 
 jobs:
-    job debug:
+    job_debug:
         runs-on: ubuntu-latest
 
         steps:
@@ -14,4 +14,4 @@ jobs:
               uses: actions/checkout@v4
 
             - name: List current folder
-            run : ls -la
+              run : ls -la
