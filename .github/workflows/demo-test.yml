@@ -60,7 +60,7 @@ jobs:
               run: docker save -o docker-go.tar docker-go:v0.0.1
         
             - name: Upload Docker image to GitHub
-              uses: actions/upload-artifact@v2
+              uses: actions/upload-artifact@v3
               with:
                 name: docker-image
                 path: docker-go.tar
