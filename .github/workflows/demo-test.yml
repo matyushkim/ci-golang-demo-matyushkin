@@ -45,7 +45,6 @@ jobs:
 
     build_to_docker:
         runs-on: ubuntu-latest
-        needs: [my_setup_lint_test, my_build]
 
         steps:
             - name: Git clone my repo
