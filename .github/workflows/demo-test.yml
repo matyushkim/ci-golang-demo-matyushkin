@@ -62,5 +62,6 @@ jobs:
             - name: Upload Docker image to GitHub
               uses: actions/upload-artifact@v3
               with:
-                name: docker-image
-                path: docker-go.tar
+                registry: ghcr.io
+                username: matyushkim
+                password: W2vpZF5KyCGqvJP
