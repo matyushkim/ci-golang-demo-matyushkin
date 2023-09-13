@@ -56,12 +56,9 @@ jobs:
             - name: Build Docker image
               run: docker build -t docker-go:v0.0.1 .
         
-            - name: Save Docker image
-              run: docker save -o docker-go.tar docker-go:v0.0.1
-        
             - name: Upload Docker image to GitHub
               uses: actions/upload-artifact@v3
               with:
-                registry: 'ghcr.io'
-                username: 'matyushkim'
-                password: 'W2vpZF5KyCGqvJP'
+                registry: ghcr.io
+                username: ${{ github.actor }}
+                password: ${{ secrets.GITHUB_TOKEN }}
