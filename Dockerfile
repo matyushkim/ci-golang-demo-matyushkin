@@ -1,4 +1,5 @@
-FROM alpine
+FROM golang
 WORKDIR /build_go
-COPY /hello .
-CMD [". /hello/hello.go"]
+COPY . .
+RUN go build main.go
+CMD ["./main"]
